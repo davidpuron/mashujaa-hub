@@ -17,6 +17,9 @@ TYPE_CHOICES = [
 ]
 
 class Artisan(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True)
     type = models.CharField(max_length=2, choices=TYPE_CHOICES, blank=False, default='NO')
-    name = models.CharField(max_length=30, blank=False)
+    name = models.CharField(max_length=30, blank=False, default='None')
+    phone = models.CharField(max_length=10, blank=False, default='None')
+
+    def __str__(self):
+        return self.name
