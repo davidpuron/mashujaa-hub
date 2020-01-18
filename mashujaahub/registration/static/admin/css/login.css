@@ -1,7 +1,10 @@
 /* LOGIN FORM */
 
+html {
+  background-image: url(/registration/static/img/kibera-background.jpg);
+}
+
 body.login {
-    background: #f8f8f8;
 }
 
 .login #header {
