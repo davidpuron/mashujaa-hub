@@ -7,5 +7,6 @@ admin.site.site_title = "Mashujaa Hub Admin"
 admin.site.index_title = "Mashujaa Hub Admin"
 
 urlpatterns = [
+    path('', admin.site.urls),
     path('admin/', admin.site.urls),
 ]

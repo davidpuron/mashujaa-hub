@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8004
+    container_name: mashujaahub_web
+    restart: unless-stopped
+
+    volumes:
+      - .:/code
+    ports:
+      - "8004:8004"
+    depends_on:
+      - migration
+    labels:
+      - "traefik.frontend.rule=Host:webapp.mashujaahub.org"
+      - "traefik.docker.network=traefik"
+      - "traefik.port=8004"
+      - "docker.group=mashujaahub"
+      - "traefik.enable=true"
+    networks:
+      - traefik
+      - net
+
+  migration:
+    build: .
+    command: python3 manage.py migrate --noinput
+    container_name: mashujaahub_migration
+    restart: unless-stopped
+    volumes:
+      - .:/code
+    networks:
+      - net
+    labels:
+      - "traefik.enable=false"
+
+networks:
+  net:
+  traefik:
+    external:
+      name: traefik

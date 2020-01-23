@@ -25,19 +25,19 @@ SECRET_KEY = '!!c28a@l@vbp=k-^&5gx-4n5#v^@^5jqq!a$&w3q6^l5vx_0vg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['webapp.mashujaahub.org','127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'registration',
 ]
 
 MIDDLEWARE = [
