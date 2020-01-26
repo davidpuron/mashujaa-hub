@@ -9,4 +9,5 @@ admin.site.index_title = "Mashujaa Hub Admin"
 urlpatterns = [
     path('', admin.site.urls),
     path('admin/', admin.site.urls),
+    path('sendmessage/', views.sendmessage),
 ]
