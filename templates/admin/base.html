@@ -48,8 +48,14 @@
                 {% if user.has_usable_password %}
                 <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a> /
                 {% endif %}
+<<<<<<< HEAD
                 <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a> /
                 <a href="/sendmessage/">Send Telegram Messages</a>
+=======
+                <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+                <a href="/sendmessage/">Send Telegram Messages</a>
+
+>>>>>>> 529a7faa2c0ad185a6da0163395facd3af41a7a0
             {% endblock %}
         </div>
         {% endif %}

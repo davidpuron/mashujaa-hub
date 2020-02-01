@@ -20,6 +20,7 @@ class Artisan(models.Model):
     type = models.CharField(max_length=2, choices=TYPE_CHOICES, blank=False, default='NO')
     name = models.CharField(max_length=30, blank=False, default='None')
     phone = models.CharField(max_length=10, blank=False, default='None')
+    telegramChatId = models.IntegerField(blank=True, default=-1)
 
     def __str__(self):
         return self.name
