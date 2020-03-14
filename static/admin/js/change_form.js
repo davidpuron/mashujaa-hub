@@ -16,5 +16,16 @@
         if (modelName) {
             $('form#' + modelName + '_form :input:visible:enabled:first').focus();
         }
+
+        /* Show custom type only if type is "other" */
+        $('.field-other_type').hide();
+        $("select#id_type").change(function(){
+            var selected_type = $(this).children("option:selected").val();
+            if (selected_type != 'OT'){
+               $('.field-other_type').hide();
+            } else {
+              $('.field-other_type').show();
+            }
+        });
     });
 })(django.jQuery);
