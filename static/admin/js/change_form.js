@@ -18,11 +18,17 @@
         }
 
         /* Show custom type only if type is "other" */
-        $('.field-other_type').hide();
+        var selected_initial_type = $("select#id_type").children("option:selected").val();
+        if (selected_initial_type != 'OT'){
+           $('.field-other_type').hide();
+        } else {
+          $('.field-other_type').show();
+        }
         $("select#id_type").change(function(){
             var selected_type = $(this).children("option:selected").val();
             if (selected_type != 'OT'){
                $('.field-other_type').hide();
+               $('input[name="other_type"]').val('');
             } else {
               $('.field-other_type').show();
             }
