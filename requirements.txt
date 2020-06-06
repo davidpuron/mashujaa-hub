@@ -18,7 +18,7 @@ daphne==2.4.1
 dataclasses==0.6
 defusedxml==0.6.0
 diff-match-patch==20181111
-Django==3.0.4
+Django==3.0.7
 django-allauth==0.40.0
 django-import-export==2.0.2
 django-pyodbc-azure==2.1.0.0
