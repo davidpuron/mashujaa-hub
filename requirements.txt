@@ -58,7 +58,7 @@ service-identity==18.1.0
 six==1.14.0
 sqlparse==0.2.4
 tablib==1.1.0
-Twisted==19.10.0
+Twisted==22.2.0
 txaio==20.1.1
 uritemplate==3.0.0
 urllib3==1.25.3
